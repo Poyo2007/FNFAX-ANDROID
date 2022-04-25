@@ -1118,7 +1118,7 @@ class PlayState extends MusicBeatState
 			luaFile = Paths.mods(luaFile);
 			doPush = true;
 		} else {
-			luaFile = Paths.getPreloadPath(luaFile);
+			luaFile = SUtil.getPath() + Paths.getPreloadPath(luaFile);
 			if(sys.FileSystem.exists(luaFile)) {
 				doPush = true;
 			}
